@@ -195,6 +195,7 @@
             width: 96%;
             border-radius: 6px;
             background-color: #fff;
+            cursor: pointer;
 
         }
 
@@ -222,11 +223,14 @@
             padding-top: 4px;
             width: 96%;
             border-radius: 6px;
+            cursor: pointer;
         }
+
         .teams:hover {
             /* background-color: #fff; */
             background-color: #ffffff;
         }
+
         .download {
             height: 36px;
             padding-left: 20px;
@@ -235,17 +239,22 @@
             width: 96%;
             border-radius: 6px;
             margin-left: 5px;
+            cursor: pointer;
         }
+
         .download i {
             font-size: 17px;
         }
+
         .download:hover {
             background-color: #fff;
         }
+
         .cloud {
             font-size: 11px;
             padding: 0px 10px;
         }
+
         .onedrive {
             height: 36px;
             margin-left: 5px;
@@ -254,14 +263,18 @@
             padding-top: 5px;
             width: 96%;
             border-radius: 6px;
+            cursor: pointer;
         }
+
         .onedrive:hover {
             background-color: #fff;
         }
+
         .btn {
             width: 100%;
             margin-top: 22vh;
         }
+
         .top-recent {
             display: flex;
             justify-content: start;
@@ -274,25 +287,35 @@
             font-size: 20px;
             position: sticky;
             top: 0;
+            /* justify-content: space-between; */
         }
+
         .png {
             height: 32px;
             width: 32px;
             border-radius: 6px;
             background-color: #5b5fc7;
             display: flex;
+            justify-content: space-around;
         }
+
+        .rec {
+            margin-left: 20px;
+        }
+
         .container {
             width: 100%;
             position: sticky;
             top: 10vh;
             z-index: -1000;
         }
+
         .box3 .top-recent .png .bi {
             color: white;
             font-size: 15px;
             margin: auto;
         }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -301,30 +324,56 @@
             z-index: -1000;
             /* top: 30vh; */
         }
+
         table td {
             height: 3.2rem;
             /* width:100% ; */
         }
+
         tr {
             border-bottom: 1px solid #ddd;
         }
+
         th {
             height: 10vh;
-            background: red;
-            position: fixed;
-            /* top: 10px; */
-            top: 18vh;
-            /* left: 28%; */
-            width: 71%;
-            /* z-index: 1000; */
+            background: white;
+            position: sticky;
+            font-size: 12px;
+            font-family: 'Almarai', sans-serif;
         }
-        .header {
-            /* Stick to the top */
-            /* position: fixed; */
-            /* top: 0; */
 
-            /* Displayed on top of other rows when scrolling */
-            /* z-index: 9999; */
+        .container tr:hover {
+            background-color: #f5f5f5;
+        }
+
+        .container tr td {
+            padding-left: 10px;
+
+        }
+
+        .container tr th {
+            padding-left: 10px;
+
+        }
+
+        .container tr td a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+
+            /* color:yellow; */
+        }
+
+        .refresh {
+            font-size: 20px;
+        }
+
+        .name {
+            padding-left: 20px;
+        }
+
+        .location {
+
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -400,208 +449,163 @@
         <div class="box3">
             <div class="top-recent">
                 <div class="png"><i class="bi bi-clock-history"></i></div>
-                Recent
+                <div class="rec">Recent</div>
+
             </div>
             <!-- <div class="description">dfgfgh</div> -->
             <div class="container">
                 <table>
                     <tr>
-                        <th>t1</th>
-                        <th>t2</th>
-                        <th>t3</th>
-                        <th>t4</th>
-                        <th>t5</th>
+                        <th>
+                            <div class="type">Type</div>
+                        </th>
+                        <th>
+                            <div class="name">Name</div>
+                        </th>
+                        <th>Modified</th>
+                        <th>
+                            <div class="location">Location</div>
+                        </th>
+                        <th>
+                            <div class="refresh"> <i class="bi bi-arrow-clockwise"></i></div>
+                        </th>
 
                     </tr>
                     <tr>
-                        <td>row_1/col_1</td>
-                        <td>col_2</td>
-                        <td>col_3</td>
-                        <td>col_4</td>
-                        <td>col_5</td>
+                        <td><img src="icon/png.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td>Screenshot[40]</td>
+                        <td>1 h ago</td>
+                        <td>kajalrituraj's one drive...</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/xls.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Meeting link for ms. Kajal</a></td>
+                        <td>1 h ago</td>
+                        <td><span>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</span></td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>All Task of python.docx</a></td>
+                        <td>2 h ago</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/pdf.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Assignment of HTML.pdf</a></td>
+                        <td>2 h ago</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/vedio.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>CSS traning.mp4</a></td>
+                        <td>3 h ago</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/ppt.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>PPT(RPA lifecycle).xls</a></td>
+                        <td>4 h ago</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Assignment (python).docx</a></td>
+                        <td>5 h ago</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/pdf.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Morning meeting.pdf</a></td>
+                        <td>yesterday</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/xls.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Doubt session.xlsx</a></td>
+                        <td> 05-08-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_1/col_1</td>
-                        <td>col_2</td>
-                        <td>col_3</td>
-                        <td>col_4</td>
-                        <td>col_5</td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Assignment3.docx</a></td>
+                        <td>03-08-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/vedio.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Meeting recording link.mp4</a></td>
+                        <td>03-08-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/png.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Screenshot23.png</a></td>
+                        <td>02-08-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Document.docx</a></td>
+                        <td>01-08-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/xls.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Timesheet format.xlsx</a></td>
+                        <td>29-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Assesment result.docx </a></td>
+                        <td>27-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/pdf.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Assesment.pdf</a></td>
+                        <td>25-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/xls.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>flipkart.xlsx</a></td>
+                        <td>23-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><img src="icon/png.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>Screenshot</a></td>
+                        <td>20-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
                     <tr>
-                        <td>row_1/col_1</td>
-                        <td>col_2</td>
-                        <td>col_3</td>
-                        <td>col_4</td>
-                        <td>col_5</td>
+                        <td><img src="icon/word.png" alt="" width="17.5px" height="17.5px"></td>
+                        <td><a>wordoc.docx</a></td>
+                        <td>20-07-2022</td>
+                        <td>Kajal_rituraj's OneDrive / Microsoft Teams Chat Files</td>
+                        <td><i class="bi bi-three-dots"></i></td>
                     </tr>
-                    <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_2</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_3</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>row_5</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+
+
                 </table>
 
             </div>
